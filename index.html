@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/046dd30d2f.js" crossorigin="anonymous"></script>
     <title>Guess The Number</title>
 </head>
 
@@ -16,32 +17,47 @@
         <h1>Guess The Number</h1><br>
     </div>
     <div class="container">
+        
         <div class="generator">
             <div class="number" id="randNumber">0</div>
             <br>
             <div class="range">
-                <div class="rangeMin" id="rangeMin">0</div>-<div class="rangeMax" id="rangeMax">0</div>
-                <br>
-                <form name="startForm" method="post">
-                    <button type="button" onclick="randGen()">Start</button>
-                </form>
+                <div class="rangeMin" id="rangeMin">0</div>
+                &nbsp;-&nbsp;
+                <div class="rangeMax" id="rangeMax">100</div>
             </div>
-        </div>
+            <form name="startForm" method="post">
+                <div class="btnCenter">
+                    <button type="button" class="btn" id="startBtn" onclick="resetGame()">Start</button>
+                </div>
 
-        <div class="guess">
-            <div class="guessWarning"></div>
-            <form name="guessForm" method="post">
-                <input type="number" name="guessNumber" max="100" min="0">
-                <button type="button" onclick="guessCheck()">Guess</button>
             </form>
-            
+
+        </div>
+
+        <div class="guessDisplay">
+            <div class="lives">
+                <i id="life5" class="fas fa-heart"></i>
+                <i id="life4" class="fas fa-heart"></i>
+                <i id="life3" class="fas fa-heart"></i>
+                <i id="life2" class="fas fa-heart"></i>
+                <i id="life1" class="fas fa-heart"></i>
+            </div>
+            <div class="guessWarning" id="guessWarning"></div>
+            <form name="guessForm" method="post">
+                <input type="number" id="guessNumber" name="guessNumber" max="100" min="0">
+                <div class="btnCenter">
+                    <button type="button" class="btn" id="guessBtn" onclick="guessCheck()">Guess</button>
+                </div>
+            </form>
+
         </div>
 
 
-        <div class="listDisplay">
+        <!-- <div class="listDisplay">
             <h2>All Numbers</h2>
             <div class="list" id="randList"></div>
-        </div>
+        </div> -->
     </div>
 </body>
 
