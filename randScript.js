@@ -40,9 +40,10 @@ function guessCheck() {
     if ($gameStart) {
         var $guess = document.forms["guessForm"]["guessNumber"].value;
 
-        console.log("min: " + $min + " max: " + $max);
-        console.log("Answer: " + $rand);
-        console.log("Your guess: " + $guess + " Cnt: " + $guessCnt);
+        //for debugging
+        // console.log("min: " + $min + " max: " + $max);
+        // console.log("Answer: " + $rand);
+        // console.log("Your guess: " + $guess + " Cnt: " + $guessCnt);
 
 
         if ($guess > $min && $guess < $max) {
@@ -57,7 +58,6 @@ function guessCheck() {
 
                     document.getElementById("life" + $guessCnt).style.color = "#85706E";
                     $guessCnt--;
-                    console.log("Cnt: " + $guessCnt);
                 }
                 else if ($guessCnt == 1) {
                     //remove last life
@@ -84,7 +84,6 @@ function guessCheck() {
 
                     document.getElementById("life" + $guessCnt).style.color = "#85706E";
                     $guessCnt--;
-                    console.log("Cnt: " + $guessCnt);
                 }
                 else if ($guessCnt == 1) {
                     //remove last life
